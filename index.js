@@ -31,3 +31,19 @@ Orders.forEach(order => {
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('aside .sidebar a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            // Menghapus kelas 'active' dari semua elemen 'a' di samping
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Menambahkan kelas 'active' ke elemen yang sedang diklik
+            this.classList.add('active');
+        });
+    });
+});
