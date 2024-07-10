@@ -301,6 +301,7 @@ main .analyse .progresss .percentage{
     justify-content: center;
     height: 100%;
     width: 100%;
+    font-size: 1.4rem;
 }
 
 main .new-users{
